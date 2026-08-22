@@ -461,13 +461,13 @@ The probability output provides additional information beyond the binary predict
 
 ## 📸 Application Screenshots
 
-The following screenshots showcase the deployed application's user interface, prediction workflow, model evaluation, and feature importance analysis.
+The following screenshots showcase the deployed application's interface, prediction workflow, model evaluation, and feature importance analysis.
 
 ---
 
 ### 🏠 Application Home & Prediction Interface
 
-The main application provides an interactive interface where users can enter customer and campaign information to generate a response prediction.
+The main application provides an interactive interface where users can enter customer and campaign information and generate a response prediction.
 
 ![Application Home](screenshots/01_home.png)
 
@@ -493,13 +493,13 @@ Example of a customer predicted not to respond to the marketing campaign, along 
 
 Comparison of baseline classification models across multiple evaluation metrics.
 
-![Baseline Model Comparison Table](screenshots/04_baseline_model_table.png)
+![Baseline Model Comparison](screenshots/04_baseline_model_comparison.png)
 
 #### Baseline ROC-AUC Comparison
 
-Visual ranking of baseline classification models based on ROC-AUC, the primary metric used for model selection.
+Visual ranking of the baseline classification models based on ROC-AUC, the primary metric used for model selection.
 
-![Baseline ROC-AUC Comparison](screenshots/04_baseline_model_comparison.png)
+![Baseline ROC-AUC Comparison](screenshots/05_baseline_model_graph.png)
 
 ---
 
@@ -511,9 +511,18 @@ Comparison of the original and hyperparameter-tuned boosting models across multi
 
 #### Original vs. Tuned ROC-AUC Comparison
 
-Visual comparison of original and tuned models based on ROC-AUC.
+Visual comparison of the original and tuned models based on ROC-AUC.
 
 ![Original vs Tuned Model Comparison](screenshots/07_original_vs_tuned_graph.png)
+
+---
+
+### 🔍 Feature Importance Analysis
+
+Top 10 features contributing to the predictions of the final CatBoost Tuned model.
+
+![Feature Importance Analysis](screenshots/08_feature_importance_graph.png)
+
 
 ---
 
