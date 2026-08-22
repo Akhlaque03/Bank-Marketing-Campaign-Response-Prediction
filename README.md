@@ -6,7 +6,7 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn\&logoColor=white)](https://scikit-learn.org/)
 [![Streamlit](https://img.shields.io/badge/Deployment-Streamlit-red?logo=streamlit\&logoColor=white)](https://streamlit.io/)
 
-> An end-to-end machine learning classification project that predicts customer response to bank marketing campaigns using multiple classification algorithms, hyperparameter tuning, and a production-ready Streamlit application.
+> An end-to-end machine learning classification project that predicts customer response to bank marketing campaigns using multiple classification algorithms, hyperparameter tuning, and an interactive Streamlit application.
 
 **Best Model:** CatBoost Tuned  
 **ROC-AUC:** 0.9350  
@@ -707,6 +707,7 @@ https://akhlaque03-bank-marketing-campaign-response-prediction.streamlit.app/
 The deployed application loads the saved model and feature configuration, accepts customer information through the Streamlit interface, and generates the predicted response along with response probabilities.
 
 ---
+## 🔮 Future Enhancements
 
 Potential future enhancements include:
 
