@@ -1,92 +1,118 @@
 # 🏦 Bank Marketing Campaign Response Prediction
 
-![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python\&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Classification-orange)
-![CatBoost](https://img.shields.io/badge/Model-CatBoost-6DB33F)
-![Streamlit](https://img.shields.io/badge/Deployment-Streamlit-red?logo=streamlit\&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-F7931E?logo=scikit-learn\&logoColor=white)
+[![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python\&logoColor=white)](https://www.python.org/)
+[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Classification-orange)](https://scikit-learn.org/)
+[![CatBoost](https://img.shields.io/badge/Model-CatBoost-6DB33F)](https://catboost.ai/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn\&logoColor=white)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Deployment-Streamlit-red?logo=streamlit\&logoColor=white)](https://streamlit.io/)
 
 > An end-to-end machine learning classification application that predicts whether a customer will respond positively to a targeted bank marketing campaign.
 
-🚀 **Live Demo:** https://akhlaque03-bank-marketing-campaign-response-prediction.streamlit.app/
+🚀 **Live Demo:**
+https://akhlaque03-bank-marketing-campaign-response-prediction.streamlit.app/
 
-### 🎯 What This Project Does
+---
 
-This application uses customer demographic, financial, campaign, and previous-contact information to predict **customer response (`Yes` / `No`)** and provides the **response probability for both outcomes** using a tuned CatBoost classification model.
+## 🎯 What This Project Does
 
-**Key highlights:**
+This project uses customer demographic, financial, campaign, and previous-contact information to predict whether a customer will respond positively to a bank marketing campaign.
 
-*  CatBoost-based customer response prediction
-*  Probability scores for both **Yes Response** and **No Response**
-*  ROC-AUC and PR-AUC based model evaluation
-*  Original vs. hyperparameter-tuned model comparison
-*  Feature importance analysis
-*  Interactive Streamlit deployment
+The final application uses a **hyperparameter-tuned CatBoost Classifier** and provides both the predicted class and response probabilities.
 
+### Key Highlights
 
+* 🤖 CatBoost-based customer response prediction
+* 🎯 Binary classification: **Yes / No**
+* 📊 Response probabilities for both outcomes
+* 📈 ROC-AUC and PR-AUC based evaluation
+* 🔄 Baseline vs. tuned model comparison
+* 🔍 Feature importance analysis
+* 🌐 Interactive Streamlit application
+* 🚀 Public cloud deployment
+
+---
 
 ## 📌 Project Overview
 
-Bank marketing campaigns generate large volumes of customer interactions, but not every customer is equally likely to respond positively. Identifying customers with a higher probability of responding can help marketing teams make campaigns more targeted and efficient.
+Bank marketing campaigns generate large volumes of customer interactions, but customers do not have the same likelihood of responding positively.
 
-This project develops an **end-to-end binary classification solution** to predict whether a customer will respond positively to a bank marketing campaign.
+This project develops an **end-to-end binary classification solution** to identify customers who are more likely to respond positively to a targeted marketing campaign.
 
-The complete machine learning workflow covers:
+The complete workflow covers:
 
-* Data preprocessing and preparation
+* Data preprocessing
 * Exploratory Data Analysis (EDA)
-* Feature engineering and categorical encoding
-* Training and evaluation of multiple classification algorithms
+* Feature engineering
+* Categorical encoding
+* Multiple classification models
 * Baseline model comparison
 * Hyperparameter tuning
 * Original vs. tuned model evaluation
 * Feature importance analysis
 * Final model selection
-* Interactive prediction with response probabilities
+* Interactive prediction
 * Streamlit deployment
 
-The final application allows users to enter customer and campaign information and receive:
+The deployed application allows users to enter customer and campaign information and receive:
 
-* **Predicted customer response — Yes / No**
-* **Probability of No Response**
-* **Probability of Yes Response**
-* **Final model used for prediction**
+* **Predicted Response:** `Yes` / `No`
+* **No Response Probability**
+* **Yes Response Probability**
+* **Final Model Used**
 
-The selected **CatBoost Tuned** model is deployed as an interactive Streamlit application for real-time predictions.
+---
 
+## 💼 Business Value
+
+The primary business value of this solution is **customer targeting**.
+
+Instead of treating every customer equally, marketing teams can use model-generated probabilities to identify customers with a higher likelihood of responding positively.
+
+This can support:
+
+* More targeted campaign outreach
+* Better prioritization of customer contacts
+* Reduced unnecessary outreach
+* More data-driven campaign decisions
+* Improved understanding of customer response patterns
+
+> **Note:** The model provides predictive insights and should be evaluated alongside business rules, campaign costs, and operational constraints before being used for real-world targeting decisions.
+
+---
 
 ## 🎯 Project Objectives
 
-The primary objective of this project is to build a reliable machine learning solution that can identify customers who are more likely to respond positively to bank marketing campaigns.
+The main objective is to build a reliable classification system for predicting customer response to bank marketing campaigns.
 
 ### Key Objectives
 
-* Predict customer response to a targeted bank marketing campaign.
-* Analyze customer demographics, financial characteristics, and campaign interaction data.
-* Compare multiple classification algorithms using relevant evaluation metrics.
-* Identify the strongest baseline model based on classification performance.
-* Apply hyperparameter tuning to selected machine learning models.
-* Compare original and tuned models to evaluate performance improvements.
-* Analyze feature importance to understand which factors contribute most to predictions.
-* Develop an interactive Streamlit application for real-time customer response prediction.
-* Provide prediction probabilities to give users additional insight into model confidence.
-* Deploy the final machine learning application for public access.
+* Predict customer response to a targeted marketing campaign.
+* Analyze customer demographic and financial characteristics.
+* Analyze campaign interaction and previous campaign information.
+* Compare multiple classification algorithms.
+* Identify the strongest baseline model.
+* Apply hyperparameter tuning to selected models.
+* Compare original and tuned model performance.
+* Analyze feature importance.
+* Build an interactive prediction application.
+* Provide prediction probabilities for additional model insight.
+* Deploy the final model for public access.
 
+---
 
+## 📂 Dataset Information
 
-##  Dataset Information
+The project uses the **Bank Marketing dataset**, containing customer demographic information, financial attributes, campaign details, and previous campaign outcomes.
 
-The project uses the **Bank Marketing dataset**, which contains customer demographic information, financial attributes, campaign details, and outcomes from previous marketing interactions.
+The dataset is used to learn patterns associated with customer responses and build a binary classification model.
 
-The dataset is used to understand customer behavior and build a classification model that predicts whether a customer will respond positively to a marketing campaign.
-
-### Input Features
+### Input Feature Categories
 
 | Category                      | Features                                      |
 | ----------------------------- | --------------------------------------------- |
 | **Customer Profile**          | Age, Job, Marital Status, Education           |
 | **Financial Information**     | Balance, Default, Housing Loan, Personal Loan |
-| **Campaign Information**      | Day, Month, Contact, Campaign                 |
+| **Campaign Information**      | Day, Month, Contact, Campaign, Duration       |
 | **Previous Campaign History** | Previous Campaign Outcome                     |
 
 ### Features Used by the Model
@@ -113,27 +139,40 @@ The dataset is used to understand customer behavior and build a classification m
 * `Yes` → Customer responded positively
 * `No` → Customer did not respond
 
-The target variable is treated as a **binary classification problem**.
+The target is treated as a **binary classification problem**.
 
+---
 
+## ⚠️ Feature Availability Consideration
+
+The `duration` feature was identified as the most influential feature in the trained model.
+
+However, **call duration is observed during or after a customer interaction**. Therefore, it should not automatically be interpreted as a feature available before a campaign contact begins.
+
+For a real-world **pre-campaign targeting system**, the model should be retrained without post-contact variables such as `duration`.
+
+This distinction is important when translating model performance into a real production targeting strategy.
+
+---
 
 ## 🛠️ Data Preprocessing & Feature Engineering
 
-Before training the classification models, the dataset was prepared to ensure that the input features were in a suitable format for machine learning.
+Before model training, the dataset was prepared to ensure that the input variables were suitable for machine learning.
 
 ### Preprocessing Steps
 
-* Checked the dataset for missing values and inconsistent entries.
+* Checked missing values and inconsistent entries.
 * Reviewed duplicate records and data quality.
-* Analyzed numerical and categorical features.
-* Evaluated feature distributions and relationships with the target variable.
+* Analyzed numerical and categorical variables.
+* Examined feature distributions.
+* Investigated relationships between features and the target.
 * Prepared categorical variables for machine learning.
 
 ### Categorical Encoding
 
 Categorical features were converted into numerical representations using **One-Hot Encoding**.
 
-This created model-ready features such as:
+Examples of generated features include:
 
 * `job_blue-collar`
 * `job_management`
@@ -146,38 +185,51 @@ This created model-ready features such as:
 
 ### Feature Alignment
 
-The final prediction application uses the same feature structure expected by the trained model.
+The deployed application uses the same feature structure expected by the trained model.
 
-The stored feature-column configuration ensures that user inputs are transformed into the correct model-ready format before generating predictions.
+A saved feature-column configuration ensures that transformed user inputs are aligned with the feature structure used during model training.
 
-This helps maintain consistency between **model training** and **production inference**.
+This helps maintain consistency between:
 
+**Training → Transformation → Production Inference**
 
-##  Exploratory Data Analysis
+---
 
-Exploratory Data Analysis was performed to understand customer characteristics, campaign behavior, feature distributions, and relationships within the dataset before model development.
+## 🔍 Exploratory Data Analysis
+
+Exploratory Data Analysis was performed to understand customer characteristics, campaign behavior, feature distributions, and relationships within the dataset.
 
 ### Analysis Performed
 
-* **Univariate Analysis** — examined distributions of individual numerical and categorical features.
+* **Univariate Analysis** — examined individual numerical and categorical feature distributions.
 * **Bivariate Analysis** — analyzed relationships between important features and customer response.
-* **Multivariate Analysis** — studied interactions among multiple variables.
-* **Categorical Analysis** — evaluated customer response across job, education, contact, housing, loan, month, and previous campaign outcome.
-* **Numerical Analysis** — examined variables such as age, balance, duration, day, and campaign.
-* **Correlation Analysis** — investigated relationships among numerical features.
-* **Feature Importance Analysis** — identified the features contributing most strongly to the final model predictions.
+* **Multivariate Analysis** — investigated interactions among multiple variables.
+* **Categorical Analysis** — evaluated response patterns across job, education, contact, housing, loan, month, and previous campaign outcome.
+* **Numerical Analysis** — analyzed age, balance, duration, day, and campaign-related variables.
+* **Correlation Analysis** — investigated relationships among numerical variables.
+* **Feature Importance Analysis** — identified the strongest predictive signals in the final model.
 
 ### Key Insight
 
-The feature importance analysis showed that **`duration`** was the most influential feature in the final model, followed by **`contact_unknown`**, **`day`**, and **`poutcome_success`**.
+The final model's feature importance analysis identified:
 
-The analysis helped guide the modelling process and provided a better understanding of the factors associated with customer campaign response.
+1. `duration`
+2. `contact_unknown`
+3. `day`
+4. `poutcome_success`
+5. `month_may`
 
+among the most influential features.
 
+The analysis provided insight into the predictive patterns captured by the model.
+
+> **Important:** Feature importance indicates how strongly a feature contributes to model predictions; it does not establish a causal relationship with customer response.
+
+---
 
 ## 🤖 Machine Learning Models Evaluated
 
-Multiple classification algorithms were trained and evaluated to establish baseline performance and identify the most suitable model for predicting customer response.
+Multiple classification algorithms were trained and evaluated to establish baseline performance and identify suitable candidates for further optimization.
 
 ### Baseline Models
 
@@ -192,31 +244,37 @@ Multiple classification algorithms were trained and evaluated to establish basel
 * LightGBM Classifier
 * CatBoost Classifier
 
-### Evaluation Metrics
+---
+
+## 📊 Evaluation Metrics
 
 The models were evaluated using multiple classification metrics:
 
-* **Accuracy** — overall proportion of correct predictions.
-* **Precision** — proportion of predicted positive responses that were actually positive.
-* **Recall** — proportion of actual positive responses correctly identified.
-* **F1-Score** — harmonic mean of precision and recall.
-* **Log Loss** — evaluates the quality of predicted probabilities.
-* **ROC-AUC** — measures the model's ability to distinguish between positive and negative classes.
-* **PR-AUC** — evaluates precision-recall performance, particularly useful when focusing on the positive class.
+| Metric        | Purpose                                                                   |
+| ------------- | ------------------------------------------------------------------------- |
+| **Accuracy**  | Overall proportion of correct predictions                                 |
+| **Precision** | Proportion of predicted positive responses that were actually positive    |
+| **Recall**    | Proportion of actual positive responses correctly identified              |
+| **F1-Score**  | Harmonic mean of precision and recall                                     |
+| **Log Loss**  | Evaluates the quality of predicted probabilities                          |
+| **ROC-AUC**   | Measures class-separation ability across decision thresholds              |
+| **PR-AUC**    | Evaluates precision-recall performance, especially for the positive class |
 
-Using multiple metrics provides a more complete evaluation than relying on accuracy alone.
+**ROC-AUC** was used as the primary ranking metric for model selection.
 
+---
 
+## 🏁 Baseline Model Comparison
 
-##  Baseline Model Comparison
+All baseline models were evaluated using the same evaluation framework.
 
-All baseline classification models were evaluated using the same evaluation framework. **ROC-AUC** was used as the primary ranking metric because it measures how effectively a classifier separates positive and negative customer responses across different decision thresholds.
+**ROC-AUC** was selected as the primary ranking metric because it evaluates how effectively a classifier separates positive and negative responses across different decision thresholds.
 
 ### Baseline Performance
 
 | Model               | Accuracy | Precision | Recall | F1-Score | Log Loss |    ROC-AUC | PR-AUC |
 | ------------------- | -------: | --------: | -----: | -------: | -------: | ---------: | -----: |
-| CatBoost            |   0.9067 |    0.8977 | 0.9067 |   0.9003 |   0.2009 | **0.9341** | 0.6336 |
+| **CatBoost**        |   0.9067 |    0.8977 | 0.9067 |   0.9003 |   0.2009 | **0.9341** | 0.6336 |
 | LightGBM            |   0.9057 |    0.8970 | 0.9057 |   0.8997 |   0.2019 |     0.9317 | 0.6335 |
 | XGBoost             |   0.9045 |    0.8962 | 0.9045 |   0.8990 |   0.2120 |     0.9268 | 0.6123 |
 | Random Forest       |   0.9018 |    0.8890 | 0.9018 |   0.8909 |   0.2464 |     0.9212 | 0.6090 |
@@ -229,29 +287,27 @@ All baseline classification models were evaluated using the same evaluation fram
 
 ### Baseline Result
 
-Among the baseline models, **CatBoost achieved the highest ROC-AUC of 0.9341**, making it the strongest baseline model according to the primary evaluation metric.
+**CatBoost achieved the highest baseline ROC-AUC of 0.9341**, making it the strongest baseline model according to the project's primary evaluation criterion.
 
-The baseline comparison was then used as the foundation for the subsequent hyperparameter tuning stage.
+The baseline comparison was then used to select boosting models for hyperparameter optimization.
 
+---
 
+## ⚙️ Hyperparameter Tuning
 
-##  Hyperparameter Tuning
-
-After evaluating the baseline models, hyperparameter tuning was performed on the selected boosting algorithms to search for configurations that could improve classification performance.
+After baseline evaluation, hyperparameter tuning was performed on selected boosting algorithms to search for configurations that could improve classification performance.
 
 ### Models Tuned
-
-The following models were optimized:
 
 * **CatBoost Classifier**
 * **XGBoost Classifier**
 * **LightGBM Classifier**
 
-The tuning process focused on finding better combinations of model parameters while maintaining a consistent evaluation framework.
+The tuning process searched for improved parameter configurations while maintaining a consistent evaluation framework.
 
 ### Tuning Objective
 
-The tuned models were compared against their corresponding original versions using:
+The tuned models were compared with their corresponding original versions using:
 
 * Accuracy
 * Precision
@@ -261,15 +317,13 @@ The tuned models were compared against their corresponding original versions usi
 * ROC-AUC
 * PR-AUC
 
-This comparison helped determine whether hyperparameter optimization provided a meaningful improvement over the original models.
+The final selection continued to use **ROC-AUC as the primary ranking metric**.
 
-The final model was selected based on overall classification performance, with **ROC-AUC** serving as the primary ranking metric.
+---
 
+## 🔄 Original vs. Tuned Model Comparison
 
-
-##  Original vs Tuned Model Comparison
-
-After hyperparameter optimization, the tuned models were compared with their original versions to evaluate the effect of parameter optimization on classification performance.
+The tuned models were compared with their original versions to evaluate the impact of hyperparameter optimization.
 
 ### Comparison Results
 
@@ -284,21 +338,29 @@ After hyperparameter optimization, the tuned models were compared with their ori
 
 ### Key Finding
 
-The **CatBoost Tuned** model achieved the highest **ROC-AUC (0.9350)** and **PR-AUC (0.6397)** among the compared models.
+**CatBoost Tuned achieved the highest ROC-AUC (0.9350) and PR-AUC (0.6397)** among the compared models.
 
-However, the comparison also shows that tuning did **not improve every metric**. For example, CatBoost Original achieved higher Accuracy, Recall, and F1-Score, while CatBoost Tuned achieved stronger ROC-AUC, Precision, and PR-AUC.
+However, hyperparameter tuning did **not improve every metric**.
 
-Therefore, the final model selection was based on the project's primary ranking criterion, **ROC-AUC**, rather than accuracy alone.
+Compared with CatBoost Original:
 
+* Accuracy decreased from **0.9067 → 0.8610**
+* Recall decreased from **0.9067 → 0.8610**
+* F1-Score decreased from **0.9003 → 0.8782**
+* Precision increased from **0.8977 → 0.9188**
+* ROC-AUC increased from **0.9341 → 0.9350**
+* PR-AUC increased from **0.6336 → 0.6397**
+* Log Loss increased from **0.2009 → 0.3173**
 
+Therefore, the tuned model was selected based on the project's **primary ranking criterion, ROC-AUC**, rather than accuracy alone.
 
-##  Final Model Selection
+---
+
+## 🏆 Final Model Selection
 
 Based on the comparative evaluation, **CatBoost Tuned** was selected as the final production model.
 
-###  CatBoost Classifier — Hyperparameter Tuned
-
-The tuned CatBoost model achieved the strongest performance according to the project's primary evaluation metric:
+### CatBoost Classifier — Hyperparameter Tuned
 
 | Metric    |      Score |
 | --------- | ---------: |
@@ -314,19 +376,19 @@ The tuned CatBoost model achieved the strongest performance according to the pro
 
 CatBoost Tuned was selected because it achieved:
 
-*  **Highest ROC-AUC:** 0.9350
-*  **Highest Precision:** 0.9188
-*  **Highest PR-AUC:** 0.6397
+* 🥇 **Highest ROC-AUC:** 0.9350
+* 🥇 **Highest Precision:** 0.9188
+* 🥇 **Highest PR-AUC:** 0.6397
 
-These metrics make it the strongest candidate for the project's primary objective of distinguishing customers who are likely to respond positively from those who are not.
+The model therefore provided the strongest performance according to the project's selected ranking criteria.
 
-The trained model was saved as a serialized `.pkl` file and integrated into the Streamlit application for production inference.
+The trained model was serialized and integrated into the Streamlit application for production inference.
 
+---
 
+## 🔍 Feature Importance Analysis
 
-##  Feature Importance Analysis
-
-Feature importance analysis was performed using the final **CatBoost Tuned** model to understand which input variables contributed most strongly to the model's predictions.
+Feature importance analysis was performed using the final **CatBoost Tuned** model to understand which variables contributed most strongly to its predictions.
 
 ### Top 10 Important Features
 
@@ -345,21 +407,29 @@ Feature importance analysis was performed using the final **CatBoost Tuned** mod
 
 ### Key Insight
 
-The analysis shows that **`duration`** has the largest feature importance by a significant margin, indicating that call duration plays a major role in the model's predictive decisions.
+The analysis shows that **`duration`** has the largest feature importance by a significant margin.
 
-Other influential variables include **contact type, day of contact, previous campaign outcome, month, housing status, age, and account balance**.
+Other influential variables include:
 
-> **Note:** Feature importance indicates how strongly a feature contributes to the model's predictions. It does not by itself establish a causal relationship between the feature and customer response.
+* Contact type
+* Day of contact
+* Previous campaign outcome
+* Campaign month
+* Housing status
+* Age
+* Account balance
 
+> **Note:** Feature importance describes the contribution of variables to model predictions. It does not establish that a feature causes a customer to respond.
 
+---
 
-##  Streamlit Web Application
+## 💻 Streamlit Web Application
 
-The trained **CatBoost Tuned** model is integrated into an interactive Streamlit application that allows users to generate customer response predictions without writing any code.
+The trained **CatBoost Tuned** model is integrated into an interactive Streamlit application that allows users to generate customer response predictions without writing code.
 
 ### 👤 Customer & Campaign Inputs
 
-Users can provide customer and campaign information through the application's sidebar, including:
+Users can provide:
 
 * Age
 * Account Balance
@@ -376,31 +446,24 @@ Users can provide customer and campaign information through the application's si
 * Campaign Month
 * Previous Campaign Outcome
 
-###  Prediction Output
+### 🎯 Prediction Output
 
-After clicking **Predict Response**, the application provides:
+After selecting the customer and campaign information, the application provides:
 
-* **Customer Response:** `Yes` or `No`
+* **Customer Response:** `Yes` / `No`
 * **No Response Probability**
 * **Yes Response Probability**
 * **Model Used:** CatBoost Tuned
 
-The probability output provides additional information beyond the binary prediction, allowing users to understand the model's estimated likelihood for each outcome.
+The probability output provides additional information beyond the binary prediction and helps users understand the model's estimated likelihood for each outcome.
 
-###  Deployment
+---
 
-The application is publicly deployed using **Streamlit Community Cloud** and can be accessed through the live demo:
+## 📸 Application Screenshots
 
-**Live Demo:**
-https://akhlaque03-bank-marketing-campaign-response-prediction.streamlit.app/
+The following screenshots demonstrate the deployed application's interface, prediction workflow, model evaluation, and feature importance analysis.
 
-
-
-#  Application Screenshots
-
-The following screenshots demonstrate the deployed application's interface, prediction workflow, model evaluation results, and feature importance analysis.
-
-##  Application Home & Prediction Interface
+### 🏠 Application Home & Prediction Interface
 
 The main application provides customer input controls through the sidebar and displays the prediction interface.
 
@@ -408,7 +471,7 @@ The main application provides customer input controls through the sidebar and di
 
 ---
 
-##  Positive Response Prediction
+### ✅ Positive Response Prediction
 
 Example of a customer predicted to respond positively to the marketing campaign.
 
@@ -416,7 +479,7 @@ Example of a customer predicted to respond positively to the marketing campaign.
 
 ---
 
-##  Negative Response Prediction
+### ❌ Negative Response Prediction
 
 Example of a customer predicted not to respond to the marketing campaign.
 
@@ -424,43 +487,43 @@ Example of a customer predicted not to respond to the marketing campaign.
 
 ---
 
-##  Baseline Model Performance
+### 📊 Baseline Model Performance
 
-Comparison table showing the performance of the baseline classification models across multiple evaluation metrics.
+Comparison of baseline classification models across multiple evaluation metrics.
 
 ![Baseline Model Comparison Table](screenshots/04_baseline_model_table.png)
 
-### Baseline ROC-AUC Comparison
+#### Baseline ROC-AUC Comparison
 
 Visual comparison of baseline models ranked by ROC-AUC.
 
-![Baseline Model Comparison](screenshots/05_baseline_model_graph.png)
+![Baseline ROC-AUC Comparison](screenshots/05_baseline_model_graph.png)
 
 ---
 
-##  Original vs Tuned Models
+### 🔄 Original vs. Tuned Models
 
-Comparison of original and hyperparameter-tuned boosting models using multiple classification metrics.
+Comparison of original and hyperparameter-tuned boosting models.
 
 ![Original vs Tuned Model Comparison](screenshots/06_original_vs_tuned_table.png)
 
-### Original vs Tuned ROC-AUC Comparison
+#### Original vs. Tuned ROC-AUC Comparison
 
-Visual comparison of the original and tuned models based on ROC-AUC.
+Visual comparison of original and tuned models based on ROC-AUC.
 
 ![Original vs Tuned Model Graph](screenshots/07_original_vs_tuned_graph.png)
 
 ---
 
-##  Feature Importance Analysis
+### 🔍 Feature Importance Analysis
 
 Top 10 features contributing to the final CatBoost Tuned model's predictions.
 
 ![Feature Importance Analysis](screenshots/08_feature_importance_graph.png)
 
+---
 
-
-#  Project Structure
+## 📁 Project Structure
 
 ```text
 Bank-Marketing-Campaign-Response-Prediction/
@@ -484,19 +547,18 @@ Bank-Marketing-Campaign-Response-Prediction/
 
 ### File & Folder Description
 
-| File / Folder              | Description                                                         |
-| -------------------------- | ------------------------------------------------------------------- |
-| `app.py`                   | Streamlit application containing the production prediction workflow |
-| `final_model_cb_tuned.pkl` | Serialized CatBoost Tuned classification model                      |
-| `Feature_columns.pkl`      | Saved feature-column configuration used during prediction           |
-| `requirements.txt`         | Python dependencies required to run the application                 |
-| `screenshots/`             | Application, model evaluation, and feature importance screenshots   |
-| `README.md`                | Project documentation                                               |
+| File / Folder              | Description                                                       |
+| -------------------------- | ----------------------------------------------------------------- |
+| `app.py`                   | Streamlit application containing the prediction workflow          |
+| `final_model_cb_tuned.pkl` | Serialized CatBoost Tuned classification model                    |
+| `Feature_columns.pkl`      | Saved feature-column configuration used during prediction         |
+| `requirements.txt`         | Python dependencies required to run the application               |
+| `screenshots/`             | Application, model evaluation, and feature importance screenshots |
+| `README.md`                | Project documentation                                             |
 
+---
 
-
-
-#  Technologies Used
+## 🛠️ Technologies Used
 
 ### Programming Language
 
@@ -536,23 +598,22 @@ Bank-Marketing-Campaign-Response-Prediction/
 * **GitHub**
 * **Streamlit Community Cloud**
 
+---
 
-
-
-#  Installation & Local Setup
+## 🚀 Installation & Local Setup
 
 Follow the steps below to run the application locally.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/akhlaque03/akhlaque03-Bank-Marketing-Campaign-Response-Prediction.git
+git clone https://github.com/Akhlaque03/Bank-Marketing-Campaign-Response-Prediction.git
 ```
 
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd akhlaque03-Bank-Marketing-Campaign-Response-Prediction
+cd Bank-Marketing-Campaign-Response-Prediction
 ```
 
 ### 3. Create a Virtual Environment
@@ -561,15 +622,13 @@ cd akhlaque03-Bank-Marketing-Campaign-Response-Prediction
 python -m venv venv
 ```
 
-Activate the environment:
-
-**Windows**
+**Windows:**
 
 ```bash
 venv\Scripts\activate
 ```
 
-**macOS / Linux**
+**macOS / Linux:**
 
 ```bash
 source venv/bin/activate
@@ -589,27 +648,20 @@ streamlit run app.py
 
 The application will open in your browser at the local Streamlit address.
 
-### 🌐 Live Application
+---
 
-The deployed version is available here:
+## 🚀 Deployment
 
-**https://akhlaque03-bank-marketing-campaign-response-prediction.streamlit.app/**
-
-
-
-
-#  Deployment
-
-The machine learning application is deployed using **Streamlit Community Cloud**, providing a publicly accessible interface for real-time customer response predictions.
+The machine learning application is deployed using **Streamlit Community Cloud**, providing a publicly accessible interface for customer response predictions.
 
 ### Deployment Workflow
 
-```text id="r3n7k1"
+```text
 Model Training
       ↓
 CatBoost Tuned Model
       ↓
-Model Serialization (.pkl)
+Model Serialization
       ↓
 GitHub Repository
       ↓
@@ -618,38 +670,36 @@ Streamlit Community Cloud
 Live Prediction Application
 ```
 
-### Live Application
+### 🌐 Live Application
 
- **Try the deployed application:**
+**Try the deployed application:**
 
 https://akhlaque03-bank-marketing-campaign-response-prediction.streamlit.app/
 
-The deployed application loads the saved CatBoost Tuned model and feature configuration, accepts customer information through the Streamlit interface, and generates the predicted response along with response probabilities.
+The deployed application loads the saved model and feature configuration, accepts customer information through the Streamlit interface, and generates the predicted response along with response probabilities.
 
+---
 
+## 🔮 Future Enhancements
 
-
-
-#  Future Enhancements
-
-The current application provides a complete machine learning prediction workflow, but several improvements could further enhance its production readiness and business value.
+The current application provides a complete machine learning prediction workflow, while several improvements could further enhance its production readiness and business value.
 
 Potential future enhancements include:
 
-*  **Interactive Analytics Dashboard** — add campaign-level analytics and customer response trends.
-*  **Customer Segmentation** — group customers based on behavioral and financial characteristics.
-*  **Explainable Predictions** — integrate SHAP-based explanations to show why an individual prediction was generated.
-*  **Model Monitoring** — track prediction performance and detect model/data drift after deployment.
-*  **Automated Model Retraining** — periodically retrain the model using newly collected campaign data.
-*  **Production API Layer** — expose the prediction model through a dedicated REST API.
-*  **CI/CD Pipeline** — automate testing, deployment, and application updates.
+* 📊 **Interactive Analytics Dashboard** — add campaign-level analytics and customer response trends.
+* 🎯 **Customer Segmentation** — group customers based on behavioral and financial characteristics.
+* 🔍 **Explainable Predictions** — integrate SHAP-based explanations to show why individual predictions are generated.
+* 📈 **Model Monitoring** — track prediction performance and detect model/data drift after deployment.
+* 🔄 **Automated Model Retraining** — periodically retrain the model using newly collected campaign data.
+* 🌐 **Production API Layer** — expose the prediction model through a dedicated REST API.
+* ⚙️ **CI/CD Pipeline** — automate testing, deployment, and application updates.
+* 🧪 **Pre-Campaign Model Version** — develop a separate model excluding post-contact variables such as `duration` for realistic pre-call targeting.
 
+---
 
+## 👨‍💻 Author
 
-
-# 👨‍💻 Author
-
-## Akhlaque Alam
+### Akhlaque Alam
 
 **Aspiring Data Scientist | Python | SQL | Machine Learning | Data Analysis**
 
@@ -657,12 +707,12 @@ I am passionate about building practical machine learning solutions, analyzing r
 
 ### Core Skills
 
-*  Python
-*  SQL
-*  Machine Learning
-*  Data Analysis & EDA
-*  Data Visualization
-*  Streamlit Deployment
+* Python
+* SQL
+* Machine Learning
+* Data Analysis & EDA
+* Data Visualization
+* Streamlit Deployment
 
 ### 🔗 Connect With Me
 
