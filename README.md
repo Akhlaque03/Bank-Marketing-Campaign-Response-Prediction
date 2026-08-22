@@ -744,7 +744,7 @@ I build practical machine learning solutions focused on real-world prediction pr
 * **GitHub:** [Akhlaque03](https://github.com/Akhlaque03)
 * **LinkedIn:** [Akhlaque Alam](https://www.linkedin.com/in/akhlaque-alam-788a53410/)
 
-I am open to **Data Science, Machine Learning, and Data Analyst internship opportunities**.
+
 
 ---
 
