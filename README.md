@@ -461,11 +461,13 @@ The probability output provides additional information beyond the binary predict
 
 ## 📸 Application Screenshots
 
-The following screenshots demonstrate the deployed application's interface, prediction workflow, model evaluation, and feature importance analysis.
+The following screenshots showcase the deployed application's user interface, prediction workflow, model evaluation, and feature importance analysis.
+
+---
 
 ### 🏠 Application Home & Prediction Interface
 
-The main application provides customer input controls through the sidebar and displays the prediction interface.
+The main application provides an interactive interface where users can enter customer and campaign information to generate a response prediction.
 
 ![Application Home](screenshots/01_home.png)
 
@@ -473,7 +475,7 @@ The main application provides customer input controls through the sidebar and di
 
 ### ✅ Positive Response Prediction
 
-Example of a customer predicted to respond positively to the marketing campaign.
+Example of a customer predicted to respond positively to the marketing campaign, along with the corresponding response probabilities.
 
 ![Positive Response Prediction](screenshots/02_prediction_yes.png)
 
@@ -481,7 +483,7 @@ Example of a customer predicted to respond positively to the marketing campaign.
 
 ### ❌ Negative Response Prediction
 
-Example of a customer predicted not to respond to the marketing campaign.
+Example of a customer predicted not to respond to the marketing campaign, along with the corresponding response probabilities.
 
 ![Negative Response Prediction](screenshots/03_prediction_no.png)
 
@@ -495,15 +497,15 @@ Comparison of baseline classification models across multiple evaluation metrics.
 
 #### Baseline ROC-AUC Comparison
 
-Visual comparison of baseline models ranked by ROC-AUC.
+Visual ranking of baseline classification models based on ROC-AUC, the primary metric used for model selection.
 
-![Baseline ROC-AUC Comparison](screenshots/05_baseline_model_graph.png)
+![Baseline ROC-AUC Comparison](screenshots/04_baseline_model_comparison.png)
 
 ---
 
 ### 🔄 Original vs. Tuned Models
 
-Comparison of original and hyperparameter-tuned boosting models.
+Comparison of the original and hyperparameter-tuned boosting models across multiple classification metrics.
 
 ![Original vs Tuned Model Comparison](screenshots/06_original_vs_tuned_table.png)
 
@@ -511,15 +513,17 @@ Comparison of original and hyperparameter-tuned boosting models.
 
 Visual comparison of original and tuned models based on ROC-AUC.
 
-![Original vs Tuned Model Graph](screenshots/07_original_vs_tuned_graph.png)
+![Original vs Tuned Model Comparison](screenshots/07_original_vs_tuned_graph.png)
 
 ---
 
 ### 🔍 Feature Importance Analysis
 
-Top 10 features contributing to the final CatBoost Tuned model's predictions.
+Top 10 features contributing to the predictions of the final CatBoost Tuned model.
 
 ![Feature Importance Analysis](screenshots/08_feature_importance_graph.png)
+
+
 
 ---
 
